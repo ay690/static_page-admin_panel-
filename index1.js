@@ -314,3 +314,5 @@ function myPromiseAll(promises){
 
 // Promise.all([showText("hello", 1000), Promise.resolve("hi"), Promise.reject("bye")]).then((val)=>console.log(val))
 myPromiseAll([showText("hello", 2000), Promise.resolve("hi")]).then((val)=>console.log(val))
+
+//So promise actually represnts upcoming completion or failure of an asynchronous event and its resulting value
