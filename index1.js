@@ -316,3 +316,16 @@ function myPromiseAll(promises){
 myPromiseAll([showText("hello", 2000), Promise.resolve("hi")]).then((val)=>console.log(val))
 
 //So promise actually represnts upcoming completion or failure of an asynchronous event and its resulting value
+
+const arr = [3, 1, 2, 3, 4, 3, 5, 5];
+console.log( typeof(arr)); //object
+const uniqueArr = arr.filter((val, index, arr) => {
+    console.log(arr.indexOf(val))
+    return arr.indexOf(val) === index;
+})
+
+console.log(uniqueArr);
+
+uniqueArr.sort((a, b) => a - b);
+
+console.log(uniqueArr);
