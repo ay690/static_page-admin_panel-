@@ -41,3 +41,58 @@ LRUcache.get("name");
 console.log(LRUcache.cache);
 LRUcache.set("location", "Mumbai");
 console.log(LRUcache.cache);  //just to check if it has been added or not
+
+let obj = {
+  name: "ani",
+  age: 24,
+  address: {
+    city: "Thane",
+    pincode: 4001107,
+  },
+};
+
+function flatenObj(obj, parent,res = {}){
+    for(let key in obj){
+        let propname = parent ? parent + "-" + key : key;
+
+        if(typeof obj[key] === "object"){
+            flatenObj(obj[key], propname, res);
+        }else{
+            res[propname] = obj[key];
+        }
+    }
+
+    return res;
+}
+
+const flatenObjRes = flatenObj(obj);
+console.log(flatenObjRes)
+
+
+function showText(text, time){
+    return new Promise((resolve, reject) => {
+       setTimeout(()=> {
+        resolve(text);
+       }, time)
+    })
+}
+
+function myPromiseAll(promises){
+    let result = [];
+    let cnt  = 0;
+
+    return new Promise((resolve, reject) => {
+        promises.forEach((p) => {
+            p.then((res) => {
+                result.push(res);
+                cnt++;
+                if(cnt === promises.length){
+                    resolve(result);
+                }
+            }).catch(err => reject(err))
+        })
+    })
+}
+
+Promise.all([showText("hello", 100), Promise.resolve("hi"), ]).then((val) => console.log(val))
+myPromiseAll([showText("hello", 100), Promise.resolve("hi"),]).then((val) => console.log(val))

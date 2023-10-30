@@ -321,6 +321,7 @@ const arr = [3, 1, 2, 3, 4, 3, 5, 5];
 console.log( typeof(arr)); //object
 const uniqueArr = arr.filter((val, index, arr) => {
     console.log(arr.indexOf(val))
+    console.log(arr.indexOf(val) === index)
     return arr.indexOf(val) === index;
 })
 

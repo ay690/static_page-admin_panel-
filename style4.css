@@ -1,0 +1,143 @@
+body html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: whitesmoke;
+}
+
+/* *****************Container*********************/
+
+.container {
+  margin: 0 auto;
+  max-width: 800px;
+  background-image: url(template.png);
+  height: auto;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+}
+
+.container1 {
+  height: 600px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: relative;
+}
+
+.container1 .image-container {
+  width: 800px;
+  height: 100%;
+  overflow: hidden;
+}
+
+.bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  image-rendering: crisp-edges;
+}
+
+/* **************details****************** */
+
+.details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bande-ka-naam {
+  font-weight: bold;
+  font-size: 60px;
+  line-height: 32px;
+  color: #7b0e04;
+  text-align: center;
+  padding: 10px;
+}
+
+.description {
+  font-size: 40px;
+  line-height: 45px;
+  max-width: 510px;
+  text-align: center;
+  color: #424242;
+}
+
+/* ***********icons************ */
+
+.icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.line-above {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  background-color: gainsboro;
+  height: 0.5px;
+  margin: 10px 0;
+}
+
+.calender {
+  position: relative;
+  height: 30px;
+  z-index: 1;
+}
+
+.calender1 {
+  margin-right: 10px;
+  height: 30px;
+}
+
+.calender2 {
+  margin-right: 10px;
+  height: 30px;
+}
+
+.calender3 {
+  margin-right: 10px;
+  height: 30px;
+}
+
+.date {
+  margin-top: 50px;
+  margin-bottom: 60px;
+  font-size: 24px;
+  padding: 20px;
+  text-align: center;
+  color: #7b0e04;
+  font-weight: bold;
+  font-family: 'Hind', sans-serif;
+}
+.date1 {
+  margin-top: 50px;
+  margin-bottom: 26px;
+  font-size: 24px;
+  color: #7b0e04;
+  padding: 20px;
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Hind', sans-serif;
+}
+
+/* ****************footer*************** */
+
+.container .footer {
+  max-width: 1000px;
+}
+
+footer {
+  background: #ee4523;
+  color: beige;
+  text-align: center;
+  padding: 20px;
+}
+
+footer p {
+  font-size: 30px;
+  line-height: 30px;
+}
